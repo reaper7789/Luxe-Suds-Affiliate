@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luxe-Suds Products</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Facial Soaps</h1>
+      <p>As an affiliate, your affiliate discount automatically applies when placing orders!</p>
+      <p>Remember that you are able to add your own markup</p>
+      <a href="dashboard.html">Back to dashboard</a>
+    </header>
+
+    <section id="products">
+      <div class="products">
+        <img src="images/WhatsApp Image 2025-05-30 at 3.49.31 PM (1).jpeg" alt="Pink Lemonade" />
+        <div class="product-info">
+          <h2>Pink Lemonade</h2>
+          <p class="price">Price: R45</p>
+          <p class="description">
+            Indulge your senses in the sweet, citrusy aroma of our Pink Lemonade soap — a decadent treat for your skin. 
+            Crafted with care, this handmade bar combines the creamy nourishment of goat’s milk, the bright freshness of lemon essential oil, 
+            the natural sweetness of honey, and the skin-loving benefits of turmeric to deliver a luxurious cleansing experience.
+          </p>
+          <ul class="benefits">
+            <li><strong>Goat’s Milk:</strong> Rich in fatty acids and vitamins, goat’s milk helps maintain the skin’s natural moisture barrier, soothes irritation, and supports a soft, supple feel — perfect for sensitive or dry skin.</li>
+            <li><strong>Lemon Essential Oil:</strong> A natural astringent and antibacterial agent, lemon oil helps to purify pores, brighten the skin, and impart a clean, uplifting scent.</li>
+            <li><strong>Honey:</strong> Known for its humectant and antibacterial properties, honey locks in moisture while helping to promote a healthy, glowing complexion.</li>
+            <li><strong>Turmeric:</strong> Revered for its anti-inflammatory and antioxidant properties, turmeric can help brighten the skin and even out skin tone.</li>
+          </ul>
+          <label>Your Markup (R):
+            <input type="number" min="0" max="90" data-base="90" class="markup"/>
+          </label>
+          <button class="add-cart" data-name="Pink Lemonade" data-base="90">🛒 Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="products">
+        <img src="images/WhatsApp Image 2025-05-30 at 3.49.31 PM (2).jpeg" alt="Sample Soap Cactus/Pineapple" />
+        <div class="product-info">
+          <h2>Sample Soap</h2>
+          <ul>
+            <li>Cactus: Citrus Sunrise</li>
+            <li>Pineapple: Pink Lemonade</li>
+          </ul>
+          <p>Price: R15</p>
+          <label>Your Markup (R):
+            <input type="number" min="0" max="30" data-base="30" class="markup"/>
+          </label>
+          <button class="add-cart" data-name="Sample-soap - Cactus/Pineapple" data-base="15">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <a href="checkout.html"><button class="checkout-btn">Go to checkout</button></a>
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>

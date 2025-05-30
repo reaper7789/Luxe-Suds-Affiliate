@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Luxe-Suds Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Include the Menu Bar -->
+    <header class="menu-bar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <header>
+            <h1> Admin Panel</h1>
+            <p> Welcome, Admin</p>
+        </header>
+
+        <section>
+            <h2> Affiliate Payout Requests</h2>
+            <ul id="payout-requests">
+                <li>No payout requests.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Stats</h2>
+            <p> Total Affiliates: <span id="affiliate-count">1</span></p>
+            <p> Total profit requested: R <span id="total-profit-requested">amount: 105</span></p>
+        </section>
+
+        <script>
+            // Simulated payout requests
+            const requests = [
+                {name: 'Affiliate 1', email: 'affiliate@luxesuds.com', amount: 120},
+                {name: 'Affiliate 2', email: 'test@luxesuds.com', amount: 105},
+            ];
+
+            const list = document.getElementById('payout-requests');
+            const totalProfitE1 = document.getElementById('total-profit-requested');
+
+            list.innerHTML = '';  // Clear existing list items (if any)
+
+            let total = 0;
+
+            requests.forEach(req => {
+                const li = document.createElement('li');
+                li.innerHTML = `${req.name} (${req.email}) - <strong>R${req.amount}</strong>
+                <button onclick="approve('${req.email}')">Approve</button>`;
+                list.appendChild(li);
+                total += req.amount;
+            });
+
+            totalProfitE1.textContent = `amount: ${total}`;  // Update total profit requested
+
+            // Approve function
+            function approve(email) {
+                alert(`Payout request approved for ${email}`);
+            }
+            // Mark the current page as active in the menu
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('.menu-bar nav ul li a');
+
+    // Loop through each link and highlight the active one
+    links.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add('active');
+        }
+    });
+});
+
+totalProfitE1.textContent = total;
+
+function approve(email) {
+    alert ('Payout approved for ${email}');
+}
+
+        </script>
+    </div>
+</body>
+</html>
+        
+    </div>
+    
+</body>
+</html>

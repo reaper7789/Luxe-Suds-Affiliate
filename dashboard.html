@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe-Suds Affiliate Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Include the Menu Bar -->
+  <header class="menu-bar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <header>
+      <h1>Welcome, <span id="affiliate-name"></span></h1>
+      <p>Luxe-Suds Affiliate Dashboard</p>
+      <p>Elegant. Simple. Empowered.</p>
+    </header>
+
+    <!-- Replaced order form with redirect -->
+    <section class="order-redirect">
+      <h2>Need to place an order?</h2>
+      <p>Click below to browse and place your product orders:</p>
+      <a href="products.html">
+        <button class="checkout-btn">Go to Products Page</button>
+      </a>
+    </section>
+
+    <section class="dashboard">
+      <h2>Your Dashboard</h2>
+      <canvas id="progress-wheel" width="150" height="150"></canvas>
+      <p>Total Sales: R<span id="total-sales">0</span></p>
+      <p>Profit: R<span id="total-profit">0</span></p>
+      <button id="payout-button" disabled>Request Payout</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

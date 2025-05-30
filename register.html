@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Registration - Luxe-Suds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <!-- Include the Menu Bar -->
+    <header class="menu-bar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <header>
+            <h1>Affiliate Registration</h1>
+            <p>Join the Luxe-Suds Affiliate Team</p>
+        </header>
+        
+        <form id="register-form">
+            <label>
+                Full Name:
+                <input type="text" id="name" required />
+            </label>
+            <label>
+                Email:
+                <input type="email" id="email" required />
+            </label>
+            <label>
+                Password:
+                <input type="password" id="password" required />
+            </label>
+            <button type="submit">Register</button>
+        </form>
+        
+        <p id="register-message"></p>
+        <p>Already have an account? <a href="index.html">Log in</a></p>
+    </div>
+
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            let users = JSON.parse(localStorage.getItem('affiliates')) || [];
+
+            // Prevent duplicate registration
+            if (users.find(user => user.email === email)) {
+                document.getElementById('register-message').textContent = 'Email already registered';
+                return;
+            }
+
+            users.push({ name, email, password });
+            localStorage.setItem('affiliates', JSON.stringify(users));
+
+            document.getElementById('register-message').textContent = 'Registration successful! Redirecting to login...';
+
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shipping Luxe-Suds</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Shipping Information</h1>
+      <a href="checkout.html">← Back to Checkout</a>
+    </header>
+
+    <form id="shipping-form">
+      <label>Full Name:
+        <input type="text" required />
+      </label>
+      <label>Street Address:
+        <input type="text" required />
+      </label>
+      <label>City:
+        <input type="text" required />
+      </label>
+      <label>Province:
+        <input type="text" required />
+      </label>
+      <label>Postal Code:
+        <input type="text" required />
+      </label>
+      <label>Phone Number:
+        <input type="tel" required />
+      </label>
+      <button type="submit">Confirm Order</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('shipping-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you! Your order has been placed. You will receive a confirmation shortly.');
+      localStorage.removeItem('cart');
+      window.location.href = 'dashboard.html';
+    });
+  </script>
+</html>
+</body>

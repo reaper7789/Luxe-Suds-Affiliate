@@ -1,0 +1,245 @@
+/*  Soft Cream #F8F4F1 - Primary Background
+Muted Sage Green #A5B79A - Secondary background or section dividers
+Warm Beige #D4C8A8 - Primary background
+Dusty Rose #D7A5B1-  headings
+Deep Charcoal #333333 - text
+Gold Accent #C19A6B- buttons and call to actions 
+Soft Lavender #C8A9D0 - for subtle highlights */
+
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F8F4F1;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.container {
+    max-width: 600px;
+    background-color: #F8F4F1;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(200, 162, 222, 1);
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #D7A5B1;
+}
+
+header p {
+    color: #333333;
+    font-size: 1em;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 30px;
+}
+
+/* Form styling */
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #C8A9D0;
+    border-radius: 4px;
+}
+
+/* Button styling */
+button {
+    padding: 10px 16px;
+    background-color: #C19A6B;
+    border: none;
+    color: #333333;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #D7A5B1;
+    cursor: not-allowed;
+}
+
+/* Canvas styling */
+canvas {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* General Menu Bar Styling */
+.menu-bar {
+    background-color:#A5B79A; /* Main color for the menu */
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.menu-bar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu-bar nav ul li {
+    display: inline;
+}
+
+.menu-bar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-bar nav ul li a:hover {
+    background-color: #91A386; /* Darker color for hover effect */
+}
+
+/* Active Link */
+.menu-bar nav ul li a.active {
+    background-color: #A67C52;
+}
+
+/* Product page styling */
+#products {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.products {
+  border: 1px solid #C8A9D0;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: #fdf7ff;
+}
+
+.products img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.products h2 {
+  margin: 0;
+  font-size: 1.4em;
+}
+
+.products .price {
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.products .description {
+  margin: 10px 0;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.products .benefits {
+  margin: 10px 0;
+  padding-left: 20px;
+  font-size: 0.95em;
+}
+
+.products label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.products input.markup {
+  margin-left: 10px;
+  width: 60px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.products button.add-cart {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #C8A9D0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.products button.add-cart:hover {
+  background-color: #b38fbf;
+}
+
+.checkout-btn {
+  margin: 30px auto;
+  display: block;
+  padding: 10px 20px;
+  background-color: #8c68a2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background-color: #7c5c92;
+}
+
+/* Place order button*/
+/* Remove underline and inherit button styles for anchor inside button */
+a {
+  text-decoration: none;
+}
+
+a button {
+  background-color: #C19A6B; /* Gold accent */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+a button:hover {
+  background-color: #a67c52; /* Slightly darker gold */
+  transform: scale(1.03);
+}
+
